@@ -1,0 +1,7 @@
+# Compiled class file
+*.class
+
+# IntelliJ
+out/
+.DS_Store
+.idea
