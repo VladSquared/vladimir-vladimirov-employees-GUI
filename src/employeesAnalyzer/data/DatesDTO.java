@@ -1,3 +1,7 @@
+/**
+ * @author Vladimir Vladimirov
+ */
+
 package employeesAnalyzer.data;
 
 import java.time.LocalDate;

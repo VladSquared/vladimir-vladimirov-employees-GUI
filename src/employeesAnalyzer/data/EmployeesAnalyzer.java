@@ -4,8 +4,6 @@
  * For proper path format and proper text file format, see Main.java
  * For proper date formats, see Entity.java
  *
- * <p>Bugs: It is not thread safe. Do not use it in multi thread environment.
- *
  * @author Vladimir Vladimirov
  */
 
@@ -80,6 +78,7 @@ public class EmployeesAnalyzer {
         return weekendDays;
     }
 
+    //throws exception in case of overlapping
     private static void checkForOverlappingEntities(List<Entity> entities) throws FileAnalyzerException{
 
         for (int i = 0; i < entities.size() - 1; i++) {

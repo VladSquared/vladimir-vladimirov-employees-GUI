@@ -1,3 +1,9 @@
+/**
+ * Controller for JavaFX Scene
+ *
+ * @author Vladimir Vladimirov
+ */
+
 package employeesAnalyzer.view;
 
 import employeesAnalyzer.data.*;
@@ -20,10 +26,6 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
     @FXML
-    private TableColumn resTableStart;
-    @FXML
-    private TableColumn resTableEnd;
-    @FXML
     private TableView<Entity> fileTable;
     @FXML
     private TableColumn<Entity, Long> fileEmployeeId;
@@ -42,6 +44,10 @@ public class Controller implements Initializable {
     @FXML
     private TableColumn<EmplWorkedTogetherDTO, Integer> resTableWeekend;
     @FXML
+    private TableColumn<EmplWorkedTogetherDTO, LocalDate> resTableStart;
+    @FXML
+    private TableColumn<EmplWorkedTogetherDTO, LocalDate> resTableEnd;
+    @FXML
     private Label workedTogetherWeekend;
     @FXML
     private Label workedTogetherDays;
@@ -51,8 +57,6 @@ public class Controller implements Initializable {
     private Label empl1Id;
     @FXML
     private TextField path;
-    @FXML
-    private Label result;
 
     private ObservableList<Entity> entityObservableList;
     private ObservableList<EmplWorkedTogetherDTO> emplWorkedTogetherDTOObservableList;

@@ -1,3 +1,11 @@
+/**
+ * Main class for GUI program that analyze employees from given text file.
+ *
+ * Uses JavaFX for GUI Build
+ *
+ * @author Vladimir Vladimirov
+ */
+
 package employeesAnalyzer;
 
 import javafx.application.Application;
