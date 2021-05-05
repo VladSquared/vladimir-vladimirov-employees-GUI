@@ -2,6 +2,5 @@
 *.class
 
 # IntelliJ
-out/
 .DS_Store
 .idea
