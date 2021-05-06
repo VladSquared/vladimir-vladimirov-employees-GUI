@@ -20,6 +20,7 @@ import javafx.stage.Window;
 
 import java.io.File;
 import java.net.URL;
+import java.nio.file.FileSystem;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -60,6 +61,7 @@ public class Controller implements Initializable {
 
     private ObservableList<Entity> entityObservableList;
     private ObservableList<EmplWorkedTogetherDTO> emplWorkedTogetherDTOObservableList;
+    private static File lastOpenDir;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -120,8 +122,11 @@ public class Controller implements Initializable {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Select Text File");
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Text Files", "*.txt"));
+        fileChooser.setInitialDirectory(lastOpenDir);
         Window openWindow = new Popup();
         File selectedFile = fileChooser.showOpenDialog(openWindow);
         this.path.setText(selectedFile.getAbsolutePath());
+        String lastOpenPath = selectedFile.getAbsolutePath().substring(0, selectedFile.getAbsolutePath().lastIndexOf(File.separator));
+        lastOpenDir = new File(lastOpenPath);
     }
 }

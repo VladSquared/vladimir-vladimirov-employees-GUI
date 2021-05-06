@@ -20,6 +20,8 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("view/main.fxml"));
         primaryStage.setTitle("Analyze employees");
+        primaryStage.setMinHeight(456);
+        primaryStage.setMinWidth(680);
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
